@@ -1,21 +1,21 @@
-const prompt = require("prompt-sync")();
+const readline = require('readline-sync');
 
-let numero1 = NaN;
-let numero2 = NaN;
-let res = NaN;
-let sobra = NaN;
-let operacao;
+var numero1 = NaN;
+var numero2 = NaN;
+var res = NaN;
+var sobra = NaN;
+var operacao;
 
 while (isNaN(numero1)){
-    numero1 = parseInt(prompt("Digite o primeiro número"));
+    numero1 = readline.questionInt("Digite o primeiro número");
     numero1 = numero1/1;
 } 
 while (isNaN(numero2)){
-    numero2 = parseInt(prompt("Digite o segundo número"));
+    numero2 = readline.questionInt("Digite o segundo número");
     numero2 = numero2/1;
 } 
 {
-operacao = prompt ("Digite qual operador aritmética deseja fazer: adição, subtração, multiplicação ou divisão");
+operacao = readline.questionInt("Digite qual operador aritmética deseja fazer: adição, subtração, multiplicação ou divisão");
 
     if (operacao == "adição");
             res = numero1 + numero2;
